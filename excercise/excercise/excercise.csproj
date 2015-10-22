@@ -59,11 +59,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ex1.cs" />
     <Compile Include="MyObservable.cs" />
-    <Compile Include="MyRange.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="week1.cs" />
+    <Compile Include="week2.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
