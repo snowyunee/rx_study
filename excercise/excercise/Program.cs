@@ -14,8 +14,9 @@ namespace excercise
 
         static void Main(string[] args)
         {
-            week1.Run();
+            //week1.Run();
             //week2.Run();
+            week3.Run();
         }
     }
 }
