@@ -11,10 +11,10 @@ using System.Reactive.Disposables;
 namespace excercise
 {
 
-    class week3
+    public static class week3
     {
         public static IObservable<TSource> Where<TSource>(
-            IObservable<TSource> source,
+            this IObservable<TSource> source,
             Func<TSource, bool> predicate)
         {
             return Observable.Create<TSource>(
@@ -29,7 +29,7 @@ namespace excercise
         }
 
         public static IObservable<TSource> SkipWhile<TSource>(
-            IObservable<TSource> source,
+            this IObservable<TSource> source,
             Func<TSource, bool> predicate)
         {
             return Observable.Create<TSource>(
@@ -56,7 +56,7 @@ namespace excercise
         }
 
         public static IObservable<TSource> Distinct<TSource>(
-            IObservable<TSource> source)
+            this IObservable<TSource> source)
         {
             return Observable.Create<TSource>(
                 (observer) =>
