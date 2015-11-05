@@ -65,6 +65,7 @@
     <Compile Include="week1.cs" />
     <Compile Include="week2.cs" />
     <Compile Include="week3.cs" />
+    <Compile Include="week4.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config">

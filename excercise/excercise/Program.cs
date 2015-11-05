@@ -16,7 +16,8 @@ namespace excercise
         {
             //week1.Run();
             //week2.Run();
-            week3.Run();
+            //week3.Run();
+            week4.Run();
         }
     }
 }
