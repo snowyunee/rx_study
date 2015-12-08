@@ -5,7 +5,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Reactive;
 using System.Reactive.Linq;
-using System.Reactive.Disposables;
 
 namespace excercise
 {
