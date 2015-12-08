@@ -34,7 +34,6 @@ namespace excercise
 
         public static void Run()
         {
-            var interval = Observable.Interval(TimeSpan.FromSeconds(1));
             var acc_money = Observable.Create<int>(
                 o =>
                 {
