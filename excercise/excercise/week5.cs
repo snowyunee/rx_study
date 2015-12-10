@@ -56,12 +56,13 @@ namespace excercise
                             limit_money,
                             (acc, limit) => new { tick = tick, enabled = acc > limit, acc = acc, limit = limit });
                     })
-                .DistinctUntilChanged(x => x.enabled);
-
-            obs.Dump("changed");
+                .Publish();
+            obs.DistinctUntilChanged(x => x.enabled)
+                .Dump("changed");
             obs.Sample(TimeSpan.FromSeconds(3))
                 .Dump("timeout");
 
+            obs.Connect();
             Console.ReadLine();
         }
     }
