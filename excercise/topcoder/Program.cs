@@ -10,7 +10,7 @@ namespace topcoder
     {
         static void Main(string[] args)
         {
-            Week2.run();
+            Week3.run();
         }
     }
 }
