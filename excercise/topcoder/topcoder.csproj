@@ -64,10 +64,14 @@
     <Compile Include="week2.cs" />
     <Compile Include="week3.cs" />
     <Compile Include="week4.cs" />
+    <Compile Include="week5.cs" />
+    <Compile Include="week6.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="packages.config" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
