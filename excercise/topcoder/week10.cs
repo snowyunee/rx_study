@@ -23,44 +23,32 @@ namespace topcoder
         static String[] set_x(String[] board, Char c)
         {
             bool changed = false;
-            return (String[])board
+            return board
                 .Select(xs =>
-                    (String) xs.Select(x =>
-                    {
-                        if (changed == false && x == '?')
-                        {
-                            changed = true;
-                            return c;
-                        }
-                        return x;
-                    })
-                 );
+                    String.Join("", xs.Select(x =>
+                   {
+                       if (changed == false && x == '?')
+                       {
+                           changed = true;
+                           return c;
+                       }
+                       return x;
+                   }))
+                 )
+                 .ToArray();
         }
         static bool ableToDraw_r(String[] board)
         {
             if (!remained(board))
-            {
-                if (check(board))
-                {
-                    String px = board.Select(x => x).Aggregate((x, y) => x + ", " + y);
-                    Console.WriteLine(px);
-                    return true;
-                }
-                else
-                {
-                    return false;
-                }
-            }
+                return check(board);
             else
-            {
                 return ableToDraw_r(set_x(board, 'W')) || ableToDraw_r(set_x(board, 'B'));
-            }
         }
         static public String ableToDraw(String[] board)
         {
             if (ableToDraw_r(board))
                 return "possible";
-            return "impossible";
+            return "Impossible";
         }
 
         static public void run()
