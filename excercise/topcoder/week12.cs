@@ -36,7 +36,11 @@ namespace topcoder
 
         static public String isCorrect(String[] board)
         {
-            return (board.count() == 8 && board.Transpose().count() == 8) ? "Correct" : "Incorrect";
+            return (board.count() == 8 &&
+                    board.Transpose().count() == 8 &&
+                    board.SelectMany(s => s)
+                         .Where(c => c == 'R')
+                         .Count() == 8) ? "Correct" : "Incorrect";
         }
 
         static public void run()
